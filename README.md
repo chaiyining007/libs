@@ -18,3 +18,15 @@ queryString({
 queryString(["param1","param2","param3"]);
 ```
 
+## cookie
+```
+import cookie from 'cookie'
+
+//写入cookie
+cookie("key","value");
+
+//取值
+cookie("key");
+//取一堆值
+cookie(["key1","key2","key3"]);//{key1:"value",key2:"value",key3:"value"}
+```
