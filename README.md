@@ -32,7 +32,9 @@ cookie("key");
 cookie(["key1","key2","key3"]);//{key1:"value",key2:"value",key3:"value"}
 ```
 
-## localStorage
+## localStorage，sessionStorage
+> sessionStorage用法与 localStorage一致
+
 ```
 import
 {
@@ -54,6 +56,14 @@ remove_local_storage_item("key");
 clear_local_storage();
 ```
 
+## imgLoad
+```
+import imgLoad from 'imgLoad'
+
+imgLoad('URL',()=>{
+  console.log(this)
+});
+```
 
 
 
