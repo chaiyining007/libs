@@ -57,6 +57,7 @@ clear_local_storage();
 ```
 
 ## imgLoad
+> 图片加载回调
 ```
 import imgLoad from 'imgLoad'
 
@@ -65,7 +66,179 @@ imgLoad('URL',()=>{
 });
 ```
 
+## XMLToJson
 
+
+```
+import {Create} from 'XMLToJson'
+
+const xmlstr=`
+<?xml version="1.0" encoding="UTF-8"?>
+<PostResponse>
+  <Bucket>Bucket</Bucket>
+  <Location>Location</Location>
+  <Key>Key</Key>
+  <ETag>ETag</ETag>
+</PostResponse>`;
+
+const xmlstr2=`
+<?xml version="1.0" encoding="UTF-8"?>
+<PostResponse>
+  <Bucket>Bucket2</Bucket>
+  <Location>Location2</Location>
+  <Key>Key2</Key>
+  <ETag>ETag2</ETag>
+</PostResponse>`;
+const xml = Create(xmlstr);
+/*
+{
+  xmlstr:`同xmlstr`,
+  jsonObj:{
+    PostResponse:{
+      Bucket:{
+        'text':'Bucket'
+      },
+      ETag:{
+        'text':'ETag'
+      },
+      Key:{
+        'text':'Key'
+      },
+      Location:{
+        'text':'Location'
+      },
+    }
+  }
+}
+*/
+
+console.log(xml.jsonObj);
+
+xml.xmlstr = xmlstr2;
+
+/*
+{
+  xmlstr:`同xmlstr`,
+  jsonObj:{
+    PostResponse:{
+      Bucket:{
+        'text':'Bucket2'
+      },
+      ETag:{
+        'text':'ETag2'
+      },
+      Key:{
+        'text':'Key2'
+      },
+      Location:{
+        'text':'Location2'
+      },
+    }
+  }
+}
+*/
+
+console.log(xml.jsonObj);
+```
+
+## OSSAjax
+> oss上传文件用的ajax
+
+```
+import ajax from 'OSSAjax'
+
+/**
+ * 往oss上传用的ajax
+ *
+ * @param      {String}     action      上传地址，默认//cyn-test.oss-cn-hangzhou.aliyuncs.com
+ * @param      {String}     filename    默认："file"
+ * @param      {File}       file        文件域
+ * @param      {Object}     data        参数{
+ *                                          key:"保存到oss的文件名",
+ *                                          OSSAccessKeyId:"",
+ *                                          policy:"",
+ *                                          Signature:""
+ *                                         }
+ * @param      {Function}   onProgress  进度回调
+ * @param      {Function}   onError     异常回调
+ * @param      {Function}   onSuccess   成功回调
+ * @param      {Object}     headers     不解释
+ */
+ajax({
+  data: oss_config,
+  action: action,
+  file: file,
+  filename: this.file_key,
+  onSuccess: (data) => {
+    
+  },
+  onError: (error, data) => {
+    
+  },
+  onProgress: (e) => {
+   
+  }
+});
+```
+
+## fileToBase64
+> 文件转base64
+```
+import file_to_base64 from 'fileToBase64'
+
+file_to_base64(document.getElementById('input_file'),base64 => {
+  console.log(base64);
+});
+```
+
+## dealImage
+> 处理图像：等比降低图像质量 未裁剪
+
+```
+import file_to_base64 from 'fileToBase64'
+import deal_image from 'dealImage'
+
+const max_size = 1024; //假设限制最大1M
+const img_size = 2048; //假设当前图片2M，一般是file.size / 1024 除以1024是为了转成k
+
+//先将上传域的图片base64
+file_to_base64(document.getElementById('input_file'),base64 => {
+  deal_image(base64 , max_size / img_size , base64 => {
+    //压缩后的base64
+    console.log(base64);
+  });
+});
+```
+## base64ToBlob
+> base64编码转Blob
+```
+// 一系列处理 可以 实现 前端压缩图片（仅压缩）,然后上传
+
+import file_to_base64 from 'fileToBase64'
+import deal_image from 'dealImage'
+import base64ToBlob from 'base64ToBlob'
+
+const max_size = 1024; //假设限制最大1M
+const img_size = 2048; //假设当前图片2M，一般是file.size / 1024 除以1024是为了转成k
+
+//先将上传域的图片base64
+file_to_base64(document.getElementById('input_file'),base64 => {
+  deal_image(base64 , max_size / img_size , base64 => {
+    //压缩后的base64
+    console.log(base64);
+    const block = base64.split(";");
+    const contentType = block[0].split(":")[1];
+    const realData = block[1].split(",")[1];
+    const blob = b64toBlob(realData, contentType);
+    console.log(blob);
+    const formData = new FormData();
+    formData.append('file_key',blob);
+    const xhr = new XMLHttpRequest();
+    xhr.open('post', '上传地址', true);
+    xhr.send(formData);
+  });
+});
+```
 
 
 
