@@ -239,6 +239,8 @@ file_to_base64(document.getElementById('input_file'),base64 => {
   });
 });
 ```
+## emoji
+> 包含2个方法：is_emoji_character，utf16_to_entities
 
 
 
