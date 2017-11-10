@@ -1,7 +1,7 @@
 # Libs
 
 ## queryString
-```
+```js
 import queryString from 'queryString'
 
 //单个参数
@@ -19,7 +19,7 @@ queryString(["param1","param2","param3"]);
 ```
 
 ## cookie
-```
+```js
 import cookie from 'cookie'
 
 //写入cookie
@@ -35,7 +35,7 @@ cookie(["key1","key2","key3"]);//{key1:"value",key2:"value",key3:"value"}
 ## localStorage，sessionStorage
 > sessionStorage用法与 localStorage一致
 
-```
+```js
 import
 {
   local_storage,
@@ -58,7 +58,7 @@ clear_local_storage();
 
 ## imgLoad
 > 图片加载回调
-```
+```js
 import imgLoad from 'imgLoad'
 
 imgLoad('URL',()=>{
@@ -69,7 +69,7 @@ imgLoad('URL',()=>{
 ## XMLToJson
 
 
-```
+```js
 import {Create} from 'XMLToJson'
 
 const xmlstr=`
@@ -144,7 +144,7 @@ console.log(xml.jsonObj);
 ## OSSAjax
 > oss上传文件用的ajax
 
-```
+```js
 import ajax from 'OSSAjax'
 
 /**
@@ -183,7 +183,7 @@ ajax({
 
 ## fileToBase64
 > 文件转base64
-```
+```js
 import file_to_base64 from 'fileToBase64'
 
 file_to_base64(document.getElementById('input_file'),base64 => {
@@ -194,7 +194,7 @@ file_to_base64(document.getElementById('input_file'),base64 => {
 ## dealImage
 > 处理图像：等比降低图像质量 未裁剪
 
-```
+```js
 import file_to_base64 from 'fileToBase64'
 import deal_image from 'dealImage'
 
@@ -211,7 +211,7 @@ file_to_base64(document.getElementById('input_file'),base64 => {
 ```
 ## base64ToBlob
 > base64编码转Blob
-```
+```js
 // 一系列处理 可以 实现 前端压缩图片（仅压缩）,然后上传
 
 import file_to_base64 from 'fileToBase64'
