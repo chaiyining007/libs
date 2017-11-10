@@ -27,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/chaiyining007/libs/issues"
   },
-  "homepage": "https://github.com/chaiyining007/libs#readme"
+  "homepage": "https://github.com/chaiyining007/libs#readme",
+  "dependencies": {
+    "foundation-project": "^1.0.4",
+    "gulp": "^3.9.1"
+  }
 }

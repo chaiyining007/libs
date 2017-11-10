@@ -242,6 +242,28 @@ file_to_base64(document.getElementById('input_file'),base64 => {
 ## emoji
 > 包含2个方法：is_emoji_character，utf16_to_entities
 
+## turnTime
+> 时间差拆分
+```js
+import turnTime from 'turnTime'
+
+//这段创建时间的代码是demo，别模仿，渣渣浏览器可能new不出来的
+const d1 = +new Date('2017-11-11 10:00:00');
+const d2 = +new Date('2017-11-11 12:01:01');
+
+/*
+{
+  d:0,
+  h:2,
+  m:1,
+  millisecond:0,
+  s:1
+}
+*/
+turnTime(d2 - d1);
+
+```
+
 
 
 
