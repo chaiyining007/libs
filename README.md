@@ -263,7 +263,18 @@ const d2 = +new Date('2017-11-11 12:01:01');
 turnTime(d2 - d1);
 
 ```
+## base64
+> base64加密解密
 
+```js
+import {encode,decode} from 'base64'
+
+encode('abcd');      // YWJjZA==
+decode('YWJjZA==');  // abcd
+
+encode(encodeURIComponent('加密中文'));   //JUU1JThBJUEwJUU1JUFGJTg2JUU0JUI4JUFEJUU2JTk2JTg3
+decodeURIComponent(decode('JUU1JThBJUEwJUU1JUFGJTg2JUU0JUI4JUFEJUU2JTk2JTg3')) //加密中文
+```
 
 
 
