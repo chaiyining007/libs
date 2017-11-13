@@ -1,6 +1,6 @@
 {
-  "name": "libs",
-  "version": "1.0.0",
+  "name": "libs-js",
+  "version": "1.0.1",
   "description": "零散的工具函数，无依赖",
   "scripts": {
     "test": ""
@@ -20,7 +20,10 @@
     "OSSAjax",
     "fileToBase64",
     "dealImage",
-    "base64ToBlob"
+    "base64",
+    "base64ToBlob",
+    "getStrLength",
+    "turnTime"
   ],
   "author": {
     "name":"柴逸宁",
