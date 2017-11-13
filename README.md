@@ -1,7 +1,31 @@
 # Libs
->     零散的工具函数，独立业务场景，几乎不可能用到全部的函数
->     建议：单独引用，import 函数名 from 'libs/src/文件名'
 
+>     零散的工具函数，独立业务场景，几乎不可能用到全部的函数
+>     建议：单独引用
+```js
+import * as libs from 'libs'        //将会引入所有函数（不推荐）
+
+// 调用名
+libs.base64.encode
+libs.base64.decode
+libs.base64.toBlob
+libs.cookie
+libs.dealImage
+libs.emoji
+libs.fileToBase64
+libs.getStrLength
+libs.imgLoad
+libs.localStorage
+libs.OSSAjax
+libs.queryString
+libs.sessionStorage
+libs.turnTime
+libs.XMLToJson
+```    
+
+```js
+import 函数名 from 'libs/src/文件名'  // 单独引用(推荐)
+```
 ## queryString
 ```js
 import queryString from 'libs/src/queryString'
