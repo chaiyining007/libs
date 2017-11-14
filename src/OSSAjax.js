@@ -83,7 +83,7 @@ export default function (option) {
             return;
         }
         try {
-            let xml_json = xml2json.Create(getBody(xhr));
+            let xml_json = xml2json.Create(getBody(xhr)).jsonObj;
             let body_json = {};
             body_json.Bucket = xml_json.PostResponse.Bucket[`text`];
             body_json.ETag = xml_json.PostResponse.ETag[`text`];
