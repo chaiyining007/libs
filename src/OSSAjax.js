@@ -1,4 +1,4 @@
-import * as xml2json from "XMLToJson";
+import * as xml2json from "./XMLToJson";
 /**
  * 往oss上传用的ajax
  *
