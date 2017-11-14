@@ -312,4 +312,11 @@ getStrLength('中文');      // 4
 
 getStrLength('English');  // 7
 ```
+## getSuffixName
+> 获取后缀名
+```js
+import getStrLength from 'libs/src/getSuffixName'
+
+getStrLength('xxxx/xxx/xx/yyy/abc.jpg'); // jpg
+```
 
