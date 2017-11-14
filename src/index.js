@@ -5,6 +5,7 @@ import _dealImage from './dealImage';
 import * as emoji from './emoji';
 import _file_to_base64 from './fileToBase64';
 import _getStrLength from './getStrLength';
+import _getSuffixName from './getSuffixName';
 import _imgLoad from './imgLoad';
 import * as _local_storage from './localStorage';
 import _OSSAjax from 'libs/src/OSSAjax'
@@ -24,6 +25,7 @@ const _export = {
     emoji,
     fileToBase64: _file_to_base64,
     getStrLength: _getStrLength,
+    getSuffixName: _getSuffixName,
     imgLoad: _imgLoad,
     localStorage: _local_storage,
     OSSAjax: _OSSAjax,

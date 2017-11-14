@@ -14,6 +14,7 @@ libs.dealImage
 libs.emoji
 libs.fileToBase64
 libs.getStrLength
+libs.getSuffixName
 libs.imgLoad
 libs.localStorage
 libs.OSSAjax
