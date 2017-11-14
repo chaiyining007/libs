@@ -1,13 +1,3 @@
-import Symbol from "Symbol"
-
-`<?xml version="1.0" encoding="UTF-8"?>
-<PostResponse>
-  <Bucket>wsmall-aphrodite2222222</Bucket>
-  <Location>http://wsmall-aphrodite.oss-ap-southeast-1.aliyuncs.com//wsmall_sku/img/production/en/1509678071420_109506146.png</Location>
-  <Key>wsmall_sku/img/production/en/1509678071420_109506146.png</Key>
-  <ETag>B478F96A52BD2E53A34A381AB0D91B4C</ETag>
-</PostResponse>`
-
 const init = Symbol('init');
 const cursor = Symbol('cursor');
 const jsonObj = Symbol('jsonObj');
