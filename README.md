@@ -256,7 +256,7 @@ file_to_base64(document.getElementById('input_file'),base64 => {
     const block = base64.split(";");
     const contentType = block[0].split(":")[1];
     const realData = block[1].split(",")[1];
-    const blob = b64toBlob(realData, contentType);
+    const blob = base64ToBlob(realData, contentType);
     console.log(blob);
     const formData = new FormData();
     formData.append('file_key',blob);
