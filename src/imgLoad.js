@@ -1,11 +1,11 @@
-export default (src, callabck) => {
+export default (src, callback) => {
     var o = new Image();
     o.src = src;
     if (o.complete) {
-        typeof callabck === "function" && callabck.call(o);
+        typeof callback === "function" && callback.call(o);
     } else {
         o.onload = function() {
-            typeof callabck === "function" && callabck.call(this);
+            typeof callback === "function" && callback.call(this);
         };
     }
 };
