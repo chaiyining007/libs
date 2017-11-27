@@ -13,7 +13,7 @@ import _queryString from './queryString';
 import * as _session_storage from './sessionStorage';
 import _turn_time from './turnTime';
 import { Create } from 'libs/src/XMLToJson';
-
+import invisible_ascii_to_html from 'libs/src/invisibleAsciiToHtml'
 
 const _export = {
     base64: {
@@ -32,7 +32,8 @@ const _export = {
     queryString: _queryString,
     sessionStorage: _session_storage,
     turnTime: _turn_time,
-    XMLToJson: Create
+    XMLToJson: Create,
+    invisibleAsciiToHtml: invisible_ascii_to_html
 };
 
 export default _export;
