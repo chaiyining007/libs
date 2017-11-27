@@ -320,4 +320,16 @@ import getStrLength from 'libs/src/getSuffixName'
 
 getStrLength('xxxx/xxx/xx/yyy/abc.jpg'); // jpg
 ```
+## invisibleAsciiToHtml
+> 不可见Ascii码，转html，目前只有 
 
+>        /n     =>   <br>  
+>        /r     =>   <br>
+>        /x20   =>   &nbsp; //空格
+
+```js
+import invisible_ascii_to_html from 'libs/src/invisibleAsciiToHtml'
+
+invisible_ascii_to_html(`1
+2 3`); //1<br>2&nbsp;3
+```
