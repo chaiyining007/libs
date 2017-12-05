@@ -9,3 +9,15 @@ export default (src, callback) => {
         };
     }
 };
+
+// new Promise(function (resolve, reject) {
+//     const o = new Image();
+//     o.src = src;
+//     if (o.complete) {
+//         resolve(o)
+//     } else {
+//         o.onload = function () {
+//             resolve(this);
+//         };
+//     }
+// })
