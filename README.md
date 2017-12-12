@@ -25,11 +25,11 @@ libs.XMLToJson
 ```    
 
 ```js
-import 函数名 from 'libs/src/文件名'  // 单独引用(推荐)
+import 函数名 from 'libs-js/src/文件名'  // 单独引用(推荐)
 ```
 ## queryString
 ```js
-import queryString from 'libs/src/queryString'
+import queryString from 'libs-js/src/queryString'
 
 //单个参数
 queryString("param");
@@ -47,7 +47,7 @@ queryString(["param1","param2","param3"]);
 
 ## cookie
 ```js
-import cookie from 'libs/src/cookie'
+import cookie from 'libs-js/src/cookie'
 
 //写入cookie
 cookie("key","value");
@@ -68,7 +68,7 @@ import
   local_storage,
   remove_local_storage_item,
   clear_local_storage
-} from 'libs/src/localStorage'
+} from 'libs-js/src/localStorage'
 
 //写入
 local_storage("key","value");
@@ -86,7 +86,7 @@ clear_local_storage();
 ## imgLoad
 > 图片加载回调
 ```js
-import imgLoad from 'libs/src/imgLoad'
+import imgLoad from 'libs-js/src/imgLoad'
 
 imgLoad('URL',()=>{
   console.log(this)
@@ -97,7 +97,7 @@ imgLoad('URL',()=>{
 
 
 ```js
-import {Create} from 'libs/src/XMLToJson'
+import {Create} from 'libs-js/src/XMLToJson'
 
 const xmlstr=`
 <?xml version="1.0" encoding="UTF-8"?>
@@ -172,7 +172,7 @@ console.log(xml.jsonObj);
 > oss上传文件用的ajax
 
 ```js
-import ajax from 'libs/src/OSSAjax'
+import ajax from 'libs-js/src/OSSAjax'
 
 /**
  * 往oss上传用的ajax
@@ -211,7 +211,7 @@ ajax({
 ## fileToBase64
 > 文件转base64
 ```js
-import file_to_base64 from 'libs/src/fileToBase64'
+import file_to_base64 from 'libs-js/src/fileToBase64'
 
 file_to_base64(document.getElementById('input_file'),base64 => {
   console.log(base64);
@@ -222,8 +222,8 @@ file_to_base64(document.getElementById('input_file'),base64 => {
 > 处理图像：等比降低图像质量 未裁剪
 
 ```js
-import file_to_base64 from 'libs/src/fileToBase64'
-import deal_image from 'libs/src/dealImage'
+import file_to_base64 from 'libs-js/src/fileToBase64'
+import deal_image from 'libs-js/src/dealImage'
 
 const max_size = 1024; //假设限制最大1M
 const img_size = 2048; //假设当前图片2M，一般是file.size / 1024 除以1024是为了转成k
@@ -241,9 +241,9 @@ file_to_base64(document.getElementById('input_file'),base64 => {
 ```js
 // 一系列处理 可以 实现 前端压缩图片（仅压缩）,然后上传
 
-import file_to_base64 from 'libs/src/fileToBase64'
-import deal_image from 'libs/src/dealImage'
-import base64ToBlob from 'libs/src/base64ToBlob'
+import file_to_base64 from 'libs-js/src/fileToBase64'
+import deal_image from 'libs-js/src/dealImage'
+import base64ToBlob from 'libs-js/src/base64ToBlob'
 
 const max_size = 1024; //假设限制最大1M
 const img_size = 2048; //假设当前图片2M，一般是file.size / 1024 除以1024是为了转成k
@@ -272,7 +272,7 @@ file_to_base64(document.getElementById('input_file'),base64 => {
 ## turnTime
 > 时间差拆分
 ```js
-import turnTime from 'libs/src/turnTime'
+import turnTime from 'libs-js/src/turnTime'
 
 //这段创建时间的代码是demo，别模仿，渣渣浏览器可能new不出来的
 const d1 = +new Date('2017-11-11 10:00:00');
@@ -294,7 +294,7 @@ turnTime(d2 - d1);
 > base64加密解密
 
 ```js
-import {encode,decode} from 'libs/src/base64'
+import {encode,decode} from 'libs-js/src/base64'
 
 encode('abcd');      // YWJjZA==
 decode('YWJjZA==');  // abcd
@@ -307,7 +307,7 @@ decodeURIComponent(decode('JUU1JThBJUEwJUU1JUFGJTg2JUU0JUI4JUFEJUU2JTk2JTg3')) /
 > 中文2个字符，其他1个字符，计算字符串长度
 
 ```js
-import getStrLength from 'libs/src/getStrLength'
+import getStrLength from 'libs-js/src/getStrLength'
 
 getStrLength('中文');      // 4
 
@@ -316,7 +316,7 @@ getStrLength('English');  // 7
 ## getSuffixName
 > 获取后缀名
 ```js
-import getStrLength from 'libs/src/getSuffixName'
+import getStrLength from 'libs-js/src/getSuffixName'
 
 getStrLength('xxxx/xxx/xx/yyy/abc.jpg'); // jpg
 ```
@@ -328,7 +328,7 @@ getStrLength('xxxx/xxx/xx/yyy/abc.jpg'); // jpg
 >        /x20   =>   &nbsp; //空格
 
 ```js
-import invisible_ascii_to_html from 'libs/src/invisibleAsciiToHtml'
+import invisible_ascii_to_html from 'libs-js/src/invisibleAsciiToHtml'
 
 invisible_ascii_to_html(`1
 2 3`); //1<br>2&nbsp;3
