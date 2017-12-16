@@ -333,3 +333,12 @@ import invisible_ascii_to_html from 'libs-js/src/invisibleAsciiToHtml'
 invisible_ascii_to_html(`1
 2 3`); //1<br>2&nbsp;3
 ```
+
+## FormatDate
+> 对 Date 的扩展
+
+```js
+import "libs-js/src/FormatDate";
+
+new Date().Format("yyyy-MM-dd HH:mm"); //2017-01-01 01:01
+```
