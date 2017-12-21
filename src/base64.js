@@ -124,6 +124,6 @@ const decode = (str) => {
     }
     return out;
 }
-const jsonencode = jsondata => encodeURIComponent(JSON.stringify(jsondata));
+const jsonencode = jsondata => encode(encodeURIComponent(JSON.stringify(jsondata)));
 const jsondecode = jsonstr => JSON.parse(decodeURIComponent(decode(jsonstr)));
-export { encode, decode, jsonencode,jsondecode }
+export { encode, decode, jsonencode, jsondecode }
