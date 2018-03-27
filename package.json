@@ -1,6 +1,6 @@
 {
   "name": "libs-js",
-  "version": "1.0.13",
+  "version": "1.0.15",
   "description": "零散的工具函数，无依赖",
   "scripts": {
     "test": ""
