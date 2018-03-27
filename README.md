@@ -10,6 +10,7 @@ libs.base64.encode
 libs.base64.decode
 libs.base64.toBlob
 libs.cookie
+libs.countDown
 libs.dealImage
 libs.emoji
 libs.fileToBase64
@@ -57,6 +58,22 @@ cookie("key");
 
 //取一堆值
 cookie(["key1","key2","key3"]);//{key1:"value",key2:"value",key3:"value"}
+```
+## countDown
+```
+countdown({
+    start: 60, //倒计时初始值
+    processCallBack: ({
+        h,
+        m,
+        s
+    }) => {
+        //倒计时进行中的回调{h:时, m:分, s:秒}
+    },
+    endCallBack: () => {
+        //倒计时结束时的回调
+    }
+});
 ```
 
 ## localStorage，sessionStorage
