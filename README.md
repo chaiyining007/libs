@@ -60,7 +60,8 @@ cookie("key");
 cookie(["key1","key2","key3"]);//{key1:"value",key2:"value",key3:"value"}
 ```
 ## countDown
-```
+```js
+import countdown from 'libs-js/src/countDown'
 countdown({
     start: 60, //倒计时初始值
     processCallBack: ({
