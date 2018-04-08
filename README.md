@@ -318,9 +318,9 @@ getStrLength('English');  // 7
 ## getSuffixName
 > 获取后缀名
 ```js
-import getStrLength from 'libs-js/src/getSuffixName'
+import getSuffixName from 'libs-js/src/getSuffixName'
 
-getStrLength('xxxx/xxx/xx/yyy/abc.jpg'); // jpg
+getSuffixName('xxxx/xxx/xx/yyy/abc.jpg'); // jpg
 ```
 ## invisibleAsciiToHtml
 > 不可见Ascii码，转html，目前只有 
