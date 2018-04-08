@@ -5,7 +5,7 @@ export default (key, value) => {
     let date = new Date();
     date.setTime(date.getTime() + 259200000); //86400000*3
     //存在value，视为赋值
-    if (value) {
+    if (value || value === "") {
         document.cookie = encodeURIComponent(key) + "=" + encodeURIComponent(value) + ";path=/;expires=" + date.toGMTString();
         return encodeURIComponent(value);
     } else {
