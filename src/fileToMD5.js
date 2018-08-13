@@ -1,4 +1,4 @@
-import md5 from "md5.js";
+import md5 from "md5";
 export default (file, callback) => {
   let reader = new FileReader();
   reader.readAsArrayBuffer(file.files[0]);
