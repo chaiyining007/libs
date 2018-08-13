@@ -1,7 +1,7 @@
 import md5 from "md5.js";
 export default (file, callback) => {
   let reader = new FileReader();
-  reader.readAsArrayBuffer(file);
+  reader.readAsArrayBuffer(file.files[0]);
   reader.addEventListener("load", function (e) {
     var res = e.target.result;
 
