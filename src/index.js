@@ -8,12 +8,12 @@ import _getStrLength from './getStrLength';
 import _getSuffixName from './getSuffixName';
 import _imgLoad from './imgLoad';
 import * as _local_storage from './localStorage';
-import _OSSAjax from 'libs-js/src/OSSAjax'
+import _OSSAjax from './OSSAjax'
 import _queryString from './queryString';
 import * as _session_storage from './sessionStorage';
 import _turn_time from './turnTime';
-import { Create } from 'libs-js/src/XMLToJson';
-import invisible_ascii_to_html from 'libs-js/src/invisibleAsciiToHtml'
+import { Create } from './XMLToJson';
+import invisible_ascii_to_html from './invisibleAsciiToHtml'
 import imgLoad from './imgLoad';
 import './FormatDate';
 const _export = {

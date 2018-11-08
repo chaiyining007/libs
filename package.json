@@ -1,9 +1,9 @@
 {
   "name": "libs-js",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "description": "零散的工具函数，无依赖",
   "scripts": {
-    "test": ""
+    "build": "node cli/build.js"
   },
   "repository": {
     "type": "git",
@@ -37,5 +37,14 @@
   "homepage": "https://github.com/chaiyining007/libs#readme",
   "dependencies": {
     "md5": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chalk": "^2.4.1",
+    "node-dir": "^0.1.17",
+    "ora": "^3.0.0",
+    "webpack": "^4.23.1"
   }
 }
