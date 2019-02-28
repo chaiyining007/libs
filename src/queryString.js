@@ -3,7 +3,7 @@ const _getVal = val => {
     let uri = window.location.href;
     re = new RegExp("" + val + "\=([^\&\?]*)", "gi");
     _ret = uri.match(re);
-    return ((uri.match(re)) ? decodeURI(uri.match(re)[0].substr(val.length + 1).split("#")[0]) : null);
+    return ((uri.match(re)) ? decodeURIComponent(uri.match(re)[0].substr(val.length + 1).split("#")[0]) : null);
 };
 export default val => {
     /*获取单个url参数*/
