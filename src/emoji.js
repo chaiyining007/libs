@@ -46,4 +46,5 @@ export const is_emoji_character = (op) => {
             }
         }
     }
+    return false;
 };

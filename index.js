@@ -1,2 +1,2 @@
-import * as libs from './dist';
+import * as libs from './src';
 export default libs;
