@@ -1,2 +1,1 @@
-import * as libs from './src';
-export default libs;
+module.exports = require('./dist');
